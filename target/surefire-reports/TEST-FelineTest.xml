@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="FelineTest" time="0.024" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="FelineTest" time="0" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2022.3.1"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -64,10 +64,7 @@
     <property name="sun.stdout.encoding" value="UTF-8"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="FelineTest" name="getKittensReturnGetKittens" time="0"/>
-  <testcase classname="FelineTest" name="howManyCalledgetKittenstest" time="0"/>
-  <testcase classname="FelineTest" name="getFamilyTestReturnString" time="0.013"/>
-  <testcase classname="FelineTest" name="getFamilyTest" time="0.002"/>
-  <testcase classname="FelineTest" name="getKittenCalledWithInttest" time="0.006"/>
-  <testcase classname="FelineTest" name="eatMeatTest" time="0.003"/>
+  <testcase classname="FelineTest" name="getKittensTest" time="0"/>
+  <testcase classname="FelineTest" name="getFamilyTestReturnStringTest" time="0"/>
+  <testcase classname="FelineTest" name="eatMeatTest" time="0"/>
 </testsuite>

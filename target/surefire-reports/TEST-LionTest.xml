@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="LionTest" time="0.02" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="LionTest" time="0.012" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2022.3.1"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -64,10 +64,10 @@
     <property name="sun.stdout.encoding" value="UTF-8"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="LionTest" name="getFoodTest[0]" time="0.008"/>
-  <testcase classname="LionTest" name="doesHaveManeTest2[0]" time="0.002"/>
-  <testcase classname="LionTest" name="getKittensLionTest[0]" time="0.004"/>
+  <testcase classname="LionTest" name="getFoodTest[0]" time="0.004"/>
+  <testcase classname="LionTest" name="doesHaveManeTest2[0]" time="0"/>
+  <testcase classname="LionTest" name="getKittensLionTest[0]" time="0.003"/>
   <testcase classname="LionTest" name="getFoodTest[1]" time="0.003"/>
-  <testcase classname="LionTest" name="doesHaveManeTest2[1]" time="0.002"/>
-  <testcase classname="LionTest" name="getKittensLionTest[1]" time="0.001"/>
+  <testcase classname="LionTest" name="doesHaveManeTest2[1]" time="0"/>
+  <testcase classname="LionTest" name="getKittensLionTest[1]" time="0.002"/>
 </testsuite>
