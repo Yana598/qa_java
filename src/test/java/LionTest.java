@@ -1,5 +1,6 @@
 import com.example.Feline;
 import com.example.Lion;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,20 +14,26 @@ import static org.mockito.Mockito.verify;
 @RunWith(Parameterized.class)
 public class LionTest {
     private final String sex1;
+    private final Boolean expected;
 
-    public LionTest(String sex1){
+    public LionTest(String sex1,Boolean expected){
         this.sex1=sex1;
+        this.expected =expected;
     }
+
     @Parameterized.Parameters // добавили аннотацию
-    public static Object[][] getSumData() {
+    public static Object[][] data() {
         return new Object[][] {
-                {"Самка"},
-                {"Самец"},
-              //  {"Исключение"},
+                {"Самка", false},
+                {"Самец", true},
+               // new Object[]{"Исключение", "Используйте допустимые значения пола животного - самей или самка"},
         };}
 
-        @Before
-        public void init() {
+    /**
+     * инициализируем мок
+     */
+    @Before
+    public void init() {
             MockitoAnnotations.initMocks(this);
         }
     @Mock
@@ -39,7 +46,7 @@ public class LionTest {
     @Test
     public void doesHaveManeTest2() throws Exception {
         Lion lion = new Lion(sex1, feline);
-        System.out.println(lion.doesHaveMane());
+        Assert.assertEquals(expected,lion.doesHaveMane());
     }
 
     /**

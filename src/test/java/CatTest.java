@@ -1,5 +1,6 @@
 import com.example.Cat;
 import com.example.Feline;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -14,14 +15,13 @@ public class CatTest {
 
 
     @Test
-    public void getSoundMyau() {
+    public void getSoundMyauTest() {
         Cat cat=new Cat(feline);
-        // Получаем значения из реального объекта
-        System.out.println(cat.getSound()); //
+        Assert.assertEquals("Мяу",cat.getSound());
     }
 
     @Test
-    public void getFoodCalledEatMeet() throws Exception {
+    public void getFoodCalledEatMeetTest() throws Exception {
         Cat cat=new Cat(feline);
         cat.getFood();
         Mockito.verify(feline).eatMeat();

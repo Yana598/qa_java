@@ -1,4 +1,5 @@
 import com.example.Feline;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
@@ -24,9 +25,9 @@ public class FelineTest {
      * проверка, что метод возвращает "кошачьи"
      */
    @Test
-    public void getFamilyTestReturnString(){
+    public void getFamilyTestReturnStringTest(){
        Mockito.when(feline.getFamily()).thenReturn("Кошачьи");
-       System.out.println(feline.getFamily());
+       Assert.assertEquals("Кошачьи",feline.getFamily());
    }
 
     /**
@@ -52,9 +53,8 @@ public class FelineTest {
      */
     @Test
     public void getKittenCalledWithInttest() {
-        feline.getKittens(3); // вызвали метод объекта с аргументом
+        feline.getKittens(3);
         Mockito.verify(feline).getKittens(Mockito.anyInt());
-        // проверили, что метод вызван с любым  числом в качестве аргумента
     }
 
     /**
